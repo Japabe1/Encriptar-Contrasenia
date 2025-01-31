@@ -15,6 +15,26 @@ public class EncriptacionBase64 {
     private String pswDecodificada;
 
     /**
+     *Constructor por defecto
+     */
+    public EncriptacionBase64() {
+        pswCodificada = "";
+        pswDecodificada = "";
+    }
+
+    /**
+     * Constructor por parámetros
+     * @param pswCodificada Constraseña codificada
+     * @param pswDecodificada Contraseña decodificada
+     */
+    public EncriptacionBase64(String pswCodificada, String pswDecodificada) {
+        this.pswCodificada = pswCodificada;
+        this.pswDecodificada = pswDecodificada;
+    }
+    
+    
+    
+    /**
      *Método get del atributo pswCodificada
      * @return Devuelve la contraseña codificada en Base64
      */
@@ -29,10 +49,37 @@ public class EncriptacionBase64 {
     public String getPswDecodificada() {
         return pswDecodificada;
     }
+
+    /**
+     * Método set para actualizar la contraseña codificada
+     * @param pswCodificada Contraseña codificada
+     */
+    public void setPswCodificada(String pswCodificada) {
+        this.pswCodificada = pswCodificada;
+    }
+
+    /**
+     * Método set para actualizar la contraseña decodificada
+     * @param pswDecodificada Contraseña decodificada
+     */
+    public void setPswDecodificada(String pswDecodificada) {
+        this.pswDecodificada = pswDecodificada;
+    }
+
+    /**
+     * Método toString que devuelve los datos actuales del objeto
+     * @return Devuelve los datos actuales del objeto
+     */
+    @Override
+    public String toString() {
+        return "EncriptacionBase64{" + "pswCodificada=" + pswCodificada + ", pswDecodificada=" + pswDecodificada + '}';
+    }
+    
+    
     
     /**
      *  Método que permite códificar una contraseña de UTF-8 a Base64
-     * @param psw Contraseña 
+     * @param psw Contraseña del usuario
      */
     public void codificarBase64(String psw){
         pswCodificada = Base64.getEncoder().encodeToString(psw.getBytes());

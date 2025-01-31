@@ -20,6 +20,22 @@ public class ContraseniaConsola {
     private char[] contrasenia;
 
     /**
+     *Constructor por defecto
+     */
+    public ContraseniaConsola() {
+        contrasenia = new char[0];
+    }
+
+    /**
+     * Constructor por parametros
+     * @param contrasenia Contraseña del usuario
+     */
+    public ContraseniaConsola(char[] contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    
+    /**
      * Método get del atributo contraseña
      * @return Devuelve la contraseña como un array de tipo char
      */
@@ -35,6 +51,24 @@ public class ContraseniaConsola {
         return new String(contrasenia);
     }
 
+    /**
+     * Método set para actualizar la contraseña del usuario
+     * @param contrasenia Contraseña del asuario
+     */
+    public void setContrasenia(char[] contrasenia) {
+        this.contrasenia = contrasenia;
+    }
+
+    /**
+     *  Método toString para mostrar los datos actualizados del objeto
+     * @return Devuelve los datos acutalizados del objeto
+     */
+    @Override
+    public String toString() {
+        return "ContraseniaConsola{" + "contrasenia=" + contrasenia + '}';
+    }
+    
+    
     /**
      * Método que pide una contraseña por consola y verifica que es la contraseña que se quiere insertar
      */
