@@ -7,20 +7,20 @@ package encriptarcontrasenia;
 import java.io.Console;
 
 /**
- * Clase ContraseniaConsola que pide por consola y almacena la contraseña siempre
- * que se verifique que esta bien introducida con una doble introducción de la 
- * contraseña y comprobación de que sean iguales
- * 
+ * Clase ContraseniaConsola que pide por consola y almacena la contraseña
+ * siempre que se verifique que esta bien introducida con una doble introducción
+ * de la contraseña y comprobación de que sean iguales
+ *
  * Version 1.0
+ *
  * @author Jose Antonio Parejo Bellido
  */
-
 public class ContraseniaConsola {
 
     private char[] contrasenia;
 
     /**
-     *Constructor por defecto
+     * Constructor por defecto
      */
     public ContraseniaConsola() {
         contrasenia = new char[0];
@@ -28,15 +28,16 @@ public class ContraseniaConsola {
 
     /**
      * Constructor por parametros
+     *
      * @param contrasenia Contraseña del usuario
      */
     public ContraseniaConsola(char[] contrasenia) {
         this.contrasenia = contrasenia;
     }
 
-    
     /**
      * Método get del atributo contraseña
+     *
      * @return Devuelve la contraseña como un array de tipo char
      */
     public char[] getContrasenia() {
@@ -45,6 +46,7 @@ public class ContraseniaConsola {
 
     /**
      * Método get del atributo contraseña
+     *
      * @return Devuelve la contraseña como un String
      */
     public String getConstrasenia() {
@@ -53,6 +55,7 @@ public class ContraseniaConsola {
 
     /**
      * Método set para actualizar la contraseña del usuario
+     *
      * @param contrasenia Contraseña del asuario
      */
     public void setContrasenia(char[] contrasenia) {
@@ -60,17 +63,18 @@ public class ContraseniaConsola {
     }
 
     /**
-     *  Método toString para mostrar los datos actualizados del objeto
+     * Método toString para mostrar los datos actualizados del objeto
+     *
      * @return Devuelve los datos acutalizados del objeto
      */
     @Override
     public String toString() {
         return "ContraseniaConsola{" + "contrasenia=" + contrasenia + '}';
     }
-    
-    
+
     /**
-     * Método que pide una contraseña por consola y verifica que es la contraseña que se quiere insertar
+     * Método que pide una contraseña por consola y verifica que es la
+     * contraseña que se quiere insertar
      */
     public void PedirContrasenia() {
         Console console = System.console();
